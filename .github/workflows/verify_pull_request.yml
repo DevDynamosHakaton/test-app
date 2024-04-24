@@ -27,7 +27,6 @@ jobs:
 
       - name: Build project
         run: |
-          cd ../backend
           mvn verify
 
       - name: Upload Code Coverage Report
