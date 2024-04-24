@@ -1,0 +1,18 @@
+spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/changelog-master.xml
+
+  datasource:
+    url: ${AZURE_POSTGRESQL_CONNECTIONSTRING}
+    username: ${AZURE_POSTGRESQL_USERNAME}
+    password: ${AZURE_POSTGRESQL_PASSWORD}
+    hikari:
+      register-mbeans: true
+
+springdoc:
+  packages-to-scan: com.devdynamos.controller
+  paths-to-match: /**
+
+server:
+  port: ${PORT}
