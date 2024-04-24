@@ -25,7 +25,7 @@ class TwitControllerTest {
     class FindAll {
         @Test
         void successful() throws Exception {
-            mockMvc.perform(get("/twit"))
+            mockMvc.perform(get("/api/twit"))
                     .andDo(print())
                     .andExpect(status().isOk())
                     .andExpect(jsonPath("$").isArray())
@@ -37,7 +37,7 @@ class TwitControllerTest {
     class FindById {
         @Test
         void successful() throws Exception {
-            mockMvc.perform(get("/twit/1"))
+            mockMvc.perform(get("/api/twit/1"))
                     .andDo(print())
                     .andExpect(status().isOk())
                     .andExpect(jsonPath("$.id").value(1));
@@ -45,7 +45,7 @@ class TwitControllerTest {
 
         @Test
         void notFound() throws Exception {
-            mockMvc.perform(get("/twit/2"))
+            mockMvc.perform(get("/api/twit/2"))
                     .andDo(print())
                     .andExpect(status().isNotFound());
         }

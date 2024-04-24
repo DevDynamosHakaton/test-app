@@ -5,7 +5,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/test?stringtype=unspecified
+    url: jdbc:postgresql://localhost:5432/help-platform?stringtype=unspecified
     username: postgres
     password: postgres
     hikari:
