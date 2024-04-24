@@ -25,6 +25,9 @@ jobs:
         run: mvn clean install
         working-directory: ./backend
 
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
